@@ -1,6 +1,17 @@
+var first = document.getElementById("overlayFirst");
+var sec = document.getElementById("overlaySecond");
+var trigger = false;
 
-var content = document.querySelector(".overlay");
+var mff = document.getElementById("30mff");
+var cmx = document.getElementById("comix");
+var snd = document.getElementById("sndLike");
+var vd = document.getElementById("videOH");
 
+var intro = document.getElementById("intro");
+var texmff = document.getElementById("mff");
+var texcmx = document.getElementById("comic");
+var texsnd = document.getElementById("snd");
+var texvd = document.getElementById("vid");
 
 var mobileChangeMediaQuery = window.matchMedia('(max-width:768px)');
 
@@ -13,16 +24,9 @@ function handleMobileChange(e)
   {
     //this means we are in mobile size!
     console.log("mobile size");
-    refresh++;
-    console.log(refresh);
   }
   else{
     console.log("big size");
-    refresh++;
-    console.log(refresh);
-  }
-  if (refresh == 2) {
-    location.reload();
   }
 }
 
@@ -87,7 +91,11 @@ function draw() {
   
   if (!trig && change) {
     isTitle = true;
-    content.style.display = "block";
+    if (!trigger) {
+      sec.style.display = "block";
+      intro.style.display = "block";
+    }
+
     background(255);
     for (let i = 0; i < circles.length; i++) {
       circles[i].run();
@@ -238,8 +246,8 @@ class Mover {
 
     if (isTitle) {
       textSize(windowWidth / 18);
-      if (windowWidth/18 <= 40) {
-        textSize(40);
+      if (windowWidth/18 <= 45) {
+        textSize(45);
       }
       text(this.myChar, this.x, this.y); //this.y - windowHeight/4 to shift up
     }
@@ -324,4 +332,68 @@ class Circ {
 }
 
 
+var cross = document.getElementById("cross");
 
+cross.addEventListener("click", function(){
+  sec.style.display = "none";
+  trigger = true;
+  first.style.display = "block";
+});
+
+
+mff.addEventListener("click", function(){
+  first.style.display = "none";
+  sec.style.display = "block";
+  texmff.style.display = "block";
+
+  intro.style.display = "none";
+  texcmx.style.display = "none";
+  texsnd.style.display = "none";
+  texvd.style.display = "none";
+});
+
+cmx.addEventListener("click", function(){
+  first.style.display = "none";
+  sec.style.display = "block";
+  texcmx.style.display = "block";
+
+  intro.style.display = "none";
+  texmff.style.display = "none";
+  texsnd.style.display = "none";
+  texvd.style.display = "none";
+});
+
+snd.addEventListener("click", function(){
+  first.style.display = "none";
+  sec.style.display = "block";
+  texsnd.style.display = "block";
+
+  intro.style.display = "none";
+  texcmx.style.display = "none";
+  texmff.style.display = "none";
+  texvd.style.display = "none";
+});
+
+vd.addEventListener("click", function(){
+  first.style.display = "none";
+  sec.style.display = "block";
+  texvd.style.display = "block";
+
+  intro.style.display = "none";
+  texcmx.style.display = "none";
+  texsnd.style.display = "none";
+  texmff.style.display = "none";
+});
+
+
+
+// var mff = document.getElementById("30mff");
+// var cmx = document.getElementById("comix");
+// var snd = document.getElementById("sndLike");
+// var vd = document.getElementById("videOH");
+
+// var intro = document.getElementById("intro");
+// var texmff = document.getElementById("30mff");
+// var texcmx = document.getElementById("videOH");
+// var texsnd = document.getElementById("videOH");
+// var texvd = document.getElementById("videOH");

@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
@@ -24,7 +26,7 @@
       
       <main>
 
-        <div class = "overlay"> 
+        <div id = "overlayFirst"> 
 
           <div class = "container">
             
@@ -34,18 +36,14 @@
                 <div class = "desc">
                   <i>30MFF</i>
                 </div>
-                <a href="https://ms12297.github.io/30MFF/" target="_blank">
-                  <img src="box11.png" alt="shiba">
-                </a>
+                <img src="box11.png" alt="shiba" id = "30mff">
               </div>
 
               <div class = "pop first animate__animated animate__fadeInBottomLeft animate__delay-1s animate__faster">
                 <div class = "desc">
                   <i>SOUNDS LIKE</i>
                 </div>
-                <a href="https://4ur1x.github.io/sounds-like/" target="_blank"> 
-                  <img src="box3.png" alt="ramadan">
-                </a>
+                <img src="box3.png" alt="ramadan" id = "sndLike">
               </div>
 
             </div>
@@ -56,33 +54,88 @@
                 <div class = "desc">
                   <i>COMIX STRIP</i>
                 </div>
-                <a href="https://fatimaalmaazmi.github.io/comicWebsite/" target="_blank">
-                  <img src="box2.png" alt="shiba">
-                </a>
+                <img src="box2.png" alt="shiba" id = "comix">
               </div>
 
               <div class = "pop animate__animated animate__fadeInBottomRight animate__delay-3s animate__faster"> 
                 <div class = "desc">
                   <i>VID-E-OH!!!</i>
                 </div>
-                <a href="https://fyk211.github.io/vide-OH/" target="_blank">
-                  <img src="box4gif.gif" alt="video">
-                </a>
+                <img src="box4gif.gif" alt="video" id = "videOH">
               </div>
                             
 
             </div>
 
-<!--             <div class = "box" id = "box3">
-              
-            </div>
-
-            <div class = "box" id = "box4">
-              
-            </div> -->
-
           </div> <!-- container -->
         </div> <!-- overlay end -->
+
+        <div id = "overlaySecond"> 
+
+          <div class = "popup"> 
+            <div class = "text" id = "intro"> 
+              <h3>
+              <b>Welcome to my Portfolio!</b>
+              <br>
+              <br>
+              <b>Here, I display all the projects that I have worked on throughout the semester.</b>
+              <b>I try to capture the "explosion of knowledge" that I have witnessed in this class in this website.</b>
+              </h3>
+            </div>
+            <div class = "text" id = "mff">
+              <h3>
+              <a href="https://ms12297.github.io/30MFF/">
+              <b>30 MFF: A Coincidence</b>
+              </a>
+              <br>
+              <br>
+              <b>My first website.</b>
+              <b>It houses my short film with Abdul (day in the life of an NYUAD student).</b>
+              <b>It is very clear here that I am a beginner in Web Development.</b>
+              </h3>
+            </div>
+            <div class = "text" id = "comic"> 
+              <h3>
+              <a href="https://fatimaalmaazmi.github.io/comicWebsite/">
+              <b>Comix Strip: Shiba the Dog</b>
+              </a>
+              <br>
+              <br>
+              <b>Here, I display all the projects that I have worked on throughout the semester.</b>
+              <b>I try to capture the "explosion of knowledge" that I have witnessed in this class in this website.</b>
+              </h3>
+            </div>
+            <div class = "text" id = "snd"> 
+              <h3>
+              <a href="https://4ur1x.github.io/sounds-like/">
+              <b>Sounds Like: Ramadan Kareem</b>
+              </a>
+              <br>
+              <br>
+              <b>Here, I display all the projects that I have worked on throughout the semester.</b>
+              <b>I try to capture the "explosion of knowledge" that I have witnessed in this class in this website.</b>
+              </h3>
+            </div>
+            <div class = "text" id = "vid"> 
+              <h3>
+              <a href="https://fyk211.github.io/vide-OH/">
+              <b>Vid-E-Oh!!!: It's You.</b>
+              </a>
+              <br>
+              <br>
+              <b>Here, I display all the projects that I have worked on throughout the semester.</b>
+              <b>I try to capture the "explosion of knowledge" that I have witnessed in this class in this website.</b>
+              </h3>
+            </div>
+            <div id="cross">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+
+          </div>
+
+        </div>
+
+
       </main>
     </div>
   </body>
